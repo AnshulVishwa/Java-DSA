@@ -39,7 +39,7 @@ public class Trapping_Rain_Water {
         return total;
     }
     public static void main(String[] args) {
-        int arr[] = {3,2,4,1,3,5,1,2};
+        int arr[] = {3 , 4  , 2 , 1 , 0 , 5 , 2 , 1 , 3};
         int max = find_maximum_num_index( arr , 0 , arr[0] , 0 ); // Finding maximum Number's Index
         int arr1[] = new int[max+1];
         int arr2[] = new int[arr.length - max];

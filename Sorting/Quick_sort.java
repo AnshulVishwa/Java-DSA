@@ -1,8 +1,4 @@
 // package Sorting;
-
-/**
- * Merge_sort
- */
 public class Quick_sort {
     public static int[] sort_by_quick( int arr[] , int upper , int lower ) {
         if( lower > upper ) return arr;

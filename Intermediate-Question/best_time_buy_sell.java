@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class best_time_buy_sell {
     public static int find_minimum( int arr[] , int i , int min ){
         
@@ -25,7 +26,17 @@ public class best_time_buy_sell {
         return best_time_to_buy_sell(arr, i+1, min);
     } 
     public static void main(String[] args) {
-        int arr[] = { 10 , 5 , 7 , 2 , 3 , 7 , 9 , 5 };
+        Scanner sc = new Scanner( System.in );
+        System.out.print("Enter the length of the array : ");
+        int length = sc.nextInt();
+
+        int arr[] = new int[length];
+
+        for( int i = 0 ; i < length ; i++ ){
+            System.out.print("Enter " + (int)(i+1) + " element value : ");
+            arr[i] = sc.nextInt();
+            if( i == length - 1 ) System.out.println("Array is Formed"); 
+        }
         int minimum_index = find_minimum( arr , 0 , 0 ); 
         int outcome = best_time_to_buy_sell( arr , 0 , minimum_index );
         if( outcome == -1 ) System.out.println( "There is no Best time to sell and buy cuz the lowest is at last." );
