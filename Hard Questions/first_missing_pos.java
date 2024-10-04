@@ -1,18 +1,20 @@
+import java.util.Arrays;
+
 public class first_missing_pos {
     public static void main(String[] args) {
-        int nums[] = {3,4,-1,1};
-            int smallest = 1;
-            boolean cont = false;
-            int i = 0;
-            do{
-                if(i == nums.length-1) i = 0;
-                if( nums[i] == smallest ){
-                    smallest++;
-                    cont = true;
-                }
-                i++;
+        int nums[] = {1,2,0};
+        for (int i = 0; i < n; i++) {
+            while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) {
+                int temp = nums[nums[i] - 1];
+                nums[nums[i] - 1] = nums[i];
+                nums[i] = temp;
             }
-            while(cont == false);
-            System.out.println(smallest);
+        }
+        int smallest = 1;
+        for( int i = 0 ; i < nums.length ; i++ ){
+            if( nums[i] < 0 ) continue;
+            if( nums[i] == smallest ) smallest++;
+        }
+        System.out.println(smallest);
     }
 }
