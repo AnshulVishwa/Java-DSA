@@ -1,28 +1,46 @@
-public class validParan {
-    public static boolean isValid( String s ){
-        s = s.replaceAll(" ", "");
-        int gap1 , gap2 , gap3;
-        gap1 = gap2 = gap3 = 0;
+class validParan {
+    public static boolean isValid(String s) {
+        s = s.trim();
 
-        for( int i = 0 ; i < s.length() ; i++ ){
-            if(  )
+        // Check if one of the pairs is missing a corresponding bracket
+        if ((s.contains("(") && !s.contains(")")) || (s.contains(")") && !s.contains("("))) return false;
+        if ((s.contains("[") && !s.contains("]")) || (s.contains("]") && !s.contains("["))) return false;
+        if ((s.contains("{") && !s.contains("}")) || (s.contains("}") && !s.contains("{"))) return false;
+
+        // Loop until no more brackets are left
+        int i = 0;
+        while (i < s.length()) {
+            s = s.replaceAll(" ", "");  // Remove spaces
+
+            if (s.contains("(") && s.contains(")")) {
+                // Check if the pair is valid, i.e., they appear in the correct order
+                if (s.indexOf(")") < s.indexOf("(")) return false;
+                s = s.replaceFirst("\\(", "");  // Replace first occurrence of '('
+                s = s.replaceFirst("\\)", "");  // Replace first occurrence of ')'
+            }
+
+            if (s.contains("[") && s.contains("]")) {
+                // Check if the pair is valid, i.e., they appear in the correct order
+                if (s.indexOf("]") < s.indexOf("[")) return false;
+                s = s.replaceFirst("\\[", "");  // Replace first occurrence of '['
+                s = s.replaceFirst("\\]", "");  // Replace first occurrence of ']'
+            }
+
+            if (s.contains("{") && s.contains("}")) {
+                // Check if the pair is valid, i.e., they appear in the correct order
+                if (s.indexOf("}") < s.indexOf("{")) return false;
+                s = s.replaceFirst("\\{", "");  // Replace first occurrence of '{'
+                s = s.replaceFirst("\\}", "");  // Replace first occurrence of '}'
+            }
+
+            i++;
         }
 
-        return true;
+        // After the loop, the string should be empty if all pairs were matched correctly
+        return s.isEmpty();
     }
+
     public static void main(String[] args) {
-        System.out.println("ans : " + isValid(" { }[ { } ] "));
+        System.out.println("answer : " + isValid("(){}[[{]]}"));  // This should output false
     }
 }
-
-//             if( s.charAt("(") && !s.charAt(")") ) return false; // If pairs do not exists
-//             else if( s.indexOf(")")-s.indexOf("(") < 0 ) return false; // if pairs are ")" & "("
-//             else if( (s.indexOf(")")-s.indexOf("("))%2 == 0 ) return false; // if pairs do not have gap to fit another pair
-    
-//             if( s.charAt("[") && !s.charAt("]") ) return false; // If pairs do not exists
-//             else if( s.indexOf("]")-s.indexOf("[") < 0 ) return false;
-//             else if( (s.indexOf("]")-s.indexOf("["))%2 == 0 ) return false;
-    
-//             if( s.charAt("{") && !s.charAt("}") ) return false; // If pairs do not exists
-//             else if( s.indexOf("}")-s.indexOf("{") < 0 ) return false;
-//             else if( (s.indexOf("}")-s.indexOf("{"))%2 == 0 ) return false;
