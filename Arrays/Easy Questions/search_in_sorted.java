@@ -1,20 +1,16 @@
-import java.util.Scanner;
-
 public class search_in_sorted {
+    public static int my_search( int arr[] , int left , int right , int target ){
+        if( left > right ) return -1;
+        int mid = (right-left)/2 + left;
+        if( arr[mid] == target ) return mid;
+        if( arr[mid] > target ) return my_search(arr, left, mid-1, target);
+        return my_search(arr, mid+1, right, target);
+    } 
     public static void main(String[] args) {
-        int arr[] = new int[10];
+        int arr[] = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 };
+        
+        System.out.println(my_search(arr , 0 , arr.length-1 , 6));
 
-        for( int i = 0 ; i < arr.length ; i++ ) arr[i] = (int)(i+1);
-
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number you want to search : ");
-        int search = sc.nextInt();
-        int a = search;
-        for( int i = 0 ; i < arr.length ; i++ ){
-            if( arr[i] == search ) search = i;
-        }
-        if ( a == search ) System.out.println("This number is not available");
-        else System.out.println("Available at index " + search);
     }
 }
  
