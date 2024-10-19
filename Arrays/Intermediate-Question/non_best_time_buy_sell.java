@@ -1,5 +1,6 @@
+// Not Optimized
 import java.util.Scanner;
-public class best_time_buy_sell {
+public class non_best_time_buy_sell {
     public static int find_minimum( int arr[] , int i , int min ){
         
         if( i == arr.length ) return min;
