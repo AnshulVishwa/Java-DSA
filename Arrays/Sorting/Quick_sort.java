@@ -1,13 +1,16 @@
 // package Sorting;
 public class Quick_sort {
     public static int[] sort_by_quick( int arr[] , int upper , int lower ) {
+        // if lower is greater then upper index then return cuz arr is sorted Now
         if( lower > upper ) return arr;
+        // function which finds the pivot element
         int pivot = partition( arr , upper , lower );
         sort_by_quick(arr, pivot-1, lower);
         sort_by_quick(arr, upper, pivot+1);
         return arr;
     }
     public static int partition( int []arr , int high , int low ){
+        // we assume that pivot element is the last element
         int pi = arr[high];
         int index = low;
         for( int i = low ; i < high ; i++ ){
