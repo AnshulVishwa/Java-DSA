@@ -8,12 +8,14 @@ public class Ad_QuickSort {
         }
         
         public int partition(int[] arr, int high, int low) {
+            
             Random rand = new Random();
             int randomIndex = low + rand.nextInt(high - low + 1);
             swap(arr, randomIndex, high);
     
             int pi = arr[high];
             int index = low;
+
             for (int i = low; i < high; i++) {
                 if (arr[i] <= pi) {
                     swap(arr, i, index);

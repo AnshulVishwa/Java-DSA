@@ -1,49 +1,40 @@
-// package Sorting;
-
 public class Merge_sort {
-    public static int[] next_arr( int arr[] ){
-        int mid = arr.length / 2;
-        int arr1[] = new int[mid];
-        int arr2[] = new int[mid + 1];
+    public static void sort(int arr[] , int mid , int first , int last) {
+        int merged[] = new int[ last - first + 1 ];
+        int i1 = first;
+        int i2 = mid+1;
+        int index = 0;
 
-        for( int i = 0 ; i < mid ; i++ ){
-            arr1[i] = arr[i];
-        }
-        for( int i = mid ; i < arr.length ; i++ ){
-            arr2[i] = arr[i];
-        }
-
-        if( arr1.length != 1 ){
-            next_arr(arr1);
-        }
-        if( arr2.length != 2 ){
-            next_arr(arr2);
-        }
-
-    }
-    public static int[] merge_by_sort( int arr[] , int arr2[] ){
-        int new_arr[] = new int[ arr.length + arr2.length ];
-        int first = 0;
-        int second = 0;
-        for( int i = 0 ; i < arr.length ; i++ ){
-            for( int j = 0 ; j < arr2.length ; j++ ){
-                if( arr[j] < arr[i] ){
-                    first = arr[j];
-                    second = arr[i];
-                }
-                else{
-                    first = arr[i];
-                    second = arr[j];
-                }
+        while ( i1 <= mid && i2 <= last ) {
+            if( arr[i1] <= arr[i2] ){
+                merged[index++] = arr[i1++]; 
+            }
+            else{
+                merged[index++] = arr[i2++]; 
             }
         }
-        for( int i = 0 ; i < new_arr.length - 1 ; i++ ){
-            new_arr[i] = first;
-            new_arr[i+1] = second;
+        while ( i1 <= mid ) {
+            merged[index++] = arr[i1++];
         }
-        return new_arr;
+        while ( i2 <= last ) {
+            merged[index++] = arr[i2++];
+        }
+
+        for( int i = 0 , j = first ; j <= last ; i++ , j++ ){
+            arr[j] = merged[i];
+        }
+
+    }
+    public static void divide( int arr[] , int first , int last ) {
+        if( first >= last ) return;
+        int mid = first + ( last - first ) / 2;
+        divide(arr, first, mid);
+        divide(arr, mid+1, last);
+        sort(arr, mid, first, last);
     }
     public static void main(String[] args) {
-        int arr[] = { 5 , 1 , 3 , 9 , 6 , 7 };
+        int arr[] = { 8 , 1 , 3 , 4 , 6 , 0 , 8 };
+        divide(arr, 0, arr.length-1);
+        for( int i = 0 ; i < arr.length ; i++ ) System.out.print(arr[i] + "\t");
     }
 }
