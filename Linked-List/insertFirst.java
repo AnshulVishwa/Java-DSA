@@ -1,29 +1,42 @@
 class Node{
     int data;
     Node next;
-    public Node( int data ){
-        this.data = data;
+    Node( int value ){
+        this.data = value;
         this.next = null;
     }
 }
 class LinkedList{
-    Node head;
+    static Node head;
     LinkedList(){
-        head = null ;
+        head = null;
     }
-    void insertFirst( int data ){
-        Node newNode = new Node(data);
+    public static void insert_first( int value ){
+        Node newNode = new Node(value);
         if( head == null ){
             head = newNode;
         }
         else{
-            Node temp = head.next;
-            head = temp;
+            newNode.next = head;
+            head = newNode;
         }
+    }
+    public static void display(){
+        Node temp = head;
+        while ( temp != null ) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null ");
     }
 }
 public class insertFirst {
     public static void main(String[] args) {
-        
+        LinkedList list = new LinkedList();
+        list.insert_first(10);
+        list.insert_first(20);
+        list.insert_first(30);
+        list.insert_first(40);
+        list.display();
     }
 }
