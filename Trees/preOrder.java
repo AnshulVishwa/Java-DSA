@@ -63,6 +63,14 @@ class Tree{
             }
         }
     }
+    // Displaying the tree ( preorder -> Root left right );
+    void preorder( Node tempRoot ){
+        if (tempRoot != null) {
+            System.out.print(tempRoot.data + " "); // Root
+            preorder(tempRoot.left); // Left subtree
+            preorder(tempRoot.right); // Right subtree
+        }
+    }
 }
 public class creation {
     public static void main(String[] args) {
