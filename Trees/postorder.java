@@ -38,7 +38,6 @@ class Trees{
         if( temp != null ){
             post_order(temp.left);
             post_order(temp.right);
-            post_order(temp.root);
             System.out.println(temp.data);
         }
     }
