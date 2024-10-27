@@ -66,23 +66,23 @@ class Tree {
         }
     }
 
-    // Post-order traversal
-    void post_order(Node temp) {
+    // In-order traversal
+    void in_order(Node temp) {
         if (temp != null) {
-            post_order(temp.left);
-            post_order(temp.right);
+            in_order(temp.left);
             System.out.println(temp.data);
+            in_order(temp.right);
         }
     }
 }
 
-public class postorder {
+public class inorder {
     public static void main(String[] args) {
         Tree newTree = new Tree();  
         int arr[] = {1, 4, 2, 6, 7, 9};
         for (int i = 0; i < arr.length; i++) {
             newTree.create(arr[i]); 
         }
-        newTree.post_order(newTree.root);
+        newTree.in_order(newTree.root);
     }
 }
