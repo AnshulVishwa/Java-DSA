@@ -23,13 +23,14 @@ class Trees{
         else{
             Node temp = root;
             Node parent = null;
+            int r = 0;
             while( temp != null ){
+                Random rand = new Random();
+                r = rand.nextInt(2);
                 parent = temp;
-                if( temp.left != null ) temp = temp.left;
+                if( r == 0 && temp.left != null ) temp = temp.left;
                 else temp = temp.right;
             }
-            Random rand = new Random();
-            int r = rand.nextInt(2);
             if( r == 0 ) parent.left = newNode;
             else parent.right = newNode;
         }
