@@ -73,6 +73,8 @@ public class creation {
         newTree.create(7);
         newTree.create(8);
         newTree.create(1);
+        // int arr[] = { 1 , 4 , 10 , 6  , 8 , 2 , 9 };
+        // for( int i = 0 ; i < arr.length ; i++ ) newTree.create(arr[i]);
         newTree.preorder(newTree.root);
     }
 }
