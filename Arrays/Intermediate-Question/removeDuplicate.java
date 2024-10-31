@@ -8,6 +8,7 @@ class removeDuplicate {
                 count++;
             }
         };
+        System.out.println("Total no of count : ");
         System.out.println(count);
     }
 }
