@@ -7,7 +7,9 @@ public class peak_index_mountainArray {
         int j = arr.length-1;
         int max = i;
         while( i <= j ){
+            int mid = (j-i)/2;
             if( arr[i] > arr[max] ) max = i;
+            if( arr[mid] > arr[max] ) max = mid;
             if( arr[j] > arr[max] ) max = j;
             i++;
             j--;
@@ -15,7 +17,7 @@ public class peak_index_mountainArray {
         return arr[max];
     }
     public static void main(String[] args) {
-        int arr[] = { 9 , 2 };
+        int arr[] = {24,69,100,99,79,78,67,36,26,19};
         System.out.println(peakIndexInMountainArray(arr));
     } 
 }
