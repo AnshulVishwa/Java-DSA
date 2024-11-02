@@ -28,6 +28,6 @@ public class display {
             // updating temp
             temp = temp.next;
         }
-        System.out.println(" null ");
+        System.out.println(" null");
     }
 }
