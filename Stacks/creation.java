@@ -56,5 +56,7 @@ public class creation{
 
         newStack.pop();
         newStack.peek();
+
+        newStack.display();
     }
 }
