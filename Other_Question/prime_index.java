@@ -1,3 +1,4 @@
+// To develop a program to print all the values whose index is prime in an array
 public class prime_index {
     public static void main(String[] args) {
         int arr[] = {1,5,8,5,8,5,9,6,2,3,5,4,7,8,5,9,6,2,2,5};
