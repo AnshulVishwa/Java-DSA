@@ -10,10 +10,12 @@ public class average_of_array {
             arr[i] = rand.nextInt(10);
             System.out.print(arr[i] + "\t");
         }
-        System.out.println();
+        System.out.println("\nAverage of the array is : " + AVG(arr) );
+    }
+    public static double AVG( int arr[] ){
         double sum = 0;
         for( int i = 0 ; i < arr.length ; i++ ) sum += arr[i];
         sum = sum/10;
-        System.out.println("Average of the array is : " + sum );
+        return sum;
     }
 }
