@@ -1,7 +1,7 @@
 public class quick_sort {
     public static void sort( int arr[] , int left , int right ) {
         if( left >= right ) return;
-
+        
         int pivot = partition( arr , left , right );
         sort(arr, left, pivot-1);
         sort(arr, pivot+1, right);
