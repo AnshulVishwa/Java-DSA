@@ -21,7 +21,7 @@ public class MergeSort {
         // pointer for merged arr
         int index = 0;
 
-        // Merge elements from both halves
+        // Merge elements from both half
         while (pointer1 <= mid && pointer2 <= high) {
             if (arr[pointer1] <= arr[pointer2]) {
                 merged[index++] = arr[pointer1++];
