@@ -1,6 +1,6 @@
 // Write a program to calculate sum of even and odd numbers in an array
 
-public class sum_of_even_and_odd {
+public class Program3 {
     public static void main(String[] args) {
         int arr[] = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 };
         int even_sum = calSum(arr)[0];

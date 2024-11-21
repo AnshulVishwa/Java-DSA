@@ -1,14 +1,18 @@
 // To implement a program that can insert, delete, and edit an element in array
 
-public class insert_edit_delete {
+public class Program2 {
         public static void main(String[] args) {
             int arr[] = new int[2];
             insert(arr, 10);
             insert(arr, 20);
-            delete(arr, 0);
+            for( int i = 0 ; i < arr.length ; i++ ) System.out.print(arr[i] + "\t");
             edit(arr, 0, 50);
+            System.out.println();
+            for( int i = 0 ; i < arr.length ; i++ ) System.out.print(arr[i] + "\t");
+            delete(arr, 0);
+            System.out.println();
+            for( int i = 0 ; i < arr.length ; i++ ) System.out.print(arr[i] + "\t");
 
-            for( int i = 0 ; i < arr.length ; i++ ) System.out.println(arr[i] + "\t");
         }   
         public static void insert(int arr[] , int data) {
             for( int i = 0 ; i < arr.length-1 ; i++ ){
