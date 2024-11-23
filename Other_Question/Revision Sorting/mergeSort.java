@@ -1,4 +1,4 @@
-public class MergeSort {
+public class mergeSort {
     public static void divide(int arr[], int left, int right) {
         // Base Condition
         if (left >= right) return;
