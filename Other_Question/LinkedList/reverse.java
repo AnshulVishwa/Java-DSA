@@ -1,3 +1,4 @@
+// Reverse a singly linked list
 class Node{
     int data;
     Node next;
@@ -24,6 +25,12 @@ public class reverse {
         head.next = new Node(20);
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
+        Node temp = head;
+        while (temp != null ) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
 
         head = reverseList(head);
 

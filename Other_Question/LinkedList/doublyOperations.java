@@ -59,6 +59,7 @@ public class doublyOperations {
             list.insert(10,0);
             list.insert(20,10);
             list.insert(30,20);
+            list.display(list.head);
             list.delete(20,list.head);
             list.display(list.head);
         }
