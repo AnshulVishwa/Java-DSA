@@ -7,7 +7,7 @@ class Node{
         data = val;
         next = null;
     }
-}
+} 
 class LinkedList{
     Node head;
     LinkedList() {head = null;}
@@ -59,8 +59,10 @@ public class doublyOperations {
             list.insert(10,0);
             list.insert(20,10);
             list.insert(30,20);
-            list.insert(40,30);
             list.delete(20,list.head);
             list.display(list.head);
         }
     }
+
+
+    
