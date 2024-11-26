@@ -1,4 +1,4 @@
-// Program to merge two sorted listsa999o0p[=]
+// Program to merge two sorted list
 class Node{
     int data;
     Node next;
@@ -51,8 +51,18 @@ public class merge_list {
         Node list2 = new Node(20);
         list2.next = new Node(40);
         list2.next.next = new Node(60);
-        
+
         Node mergeList = merge(list1, list2);
+        while( list1 != null ) {
+            System.out.print(list1.data + " -> ");
+            list1 = list1.next;
+        }
+        System.out.println("null");
+        while( list2 != null ) {
+            System.out.print(list2.data + " -> ");
+            list2 = list2.next;
+        }
+        System.out.println("null");
         while( mergeList != null ) {
             System.out.print(mergeList.data + " -> ");
             mergeList = mergeList.next;

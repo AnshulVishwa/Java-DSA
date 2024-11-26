@@ -20,7 +20,7 @@ public class reverse {
         }
         return prev;
     }
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         Node head = new Node(10);
         head.next = new Node(20);
         head.next.next = new Node(30);

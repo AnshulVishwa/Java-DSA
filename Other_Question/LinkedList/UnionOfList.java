@@ -1,3 +1,4 @@
+// program to find union of two linked list
 import java.util.HashSet;
 
 class Node {
@@ -47,6 +48,7 @@ public class UnionOfList {
         Node mergeList = union(list1, list2);
 
         // Print the merged union list
+        System.out.println("null");
         while (mergeList != null) {
             System.out.print(mergeList.data + " -> ");
             mergeList = mergeList.next;
