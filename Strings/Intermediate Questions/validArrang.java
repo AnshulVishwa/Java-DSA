@@ -2,7 +2,7 @@ public class validArrang {
     public static int[][] validArrangement(int[][] pairs) {
         int arr[][] = new int[pairs.length][pairs[0].length];
         int index1 = 0;
-        int index2 = 0;
+        int index2 = -1;
         for( int i = 0 ; i < pairs.length ; i++ ){
             int first = arr[i][0];
             int last = arr[i][1];
