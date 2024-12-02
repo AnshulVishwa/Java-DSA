@@ -25,8 +25,8 @@ public class staticList {
         Node1.next = Node2;
         // now the list is " head -> Node1 -> Node2 -> null "
         
-        Node Node3 = new Node(40);
-        Node2.next = Node3;
+        // Node Node3 = new Node(40);
+        // Node2.next = Node3;
         // now the list is " head -> Node1 -> Node2 -> Node3 -> null "
         
         // Displaying the List
