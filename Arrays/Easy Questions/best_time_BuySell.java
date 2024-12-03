@@ -13,7 +13,7 @@ public class best_time_BuySell {
         return max;
     }
     public static void main(String[] args) {
-        int arr[] = { 1 , 1 , 1 , 1};
+        int arr[] = { 1 , 4 , 0 , 9};
         int profit = maxProfit( arr );
         System.out.println("profit -> " + profit);
     }
