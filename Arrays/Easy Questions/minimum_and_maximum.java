@@ -29,5 +29,6 @@ public class minimum_and_maximum {
 
         System.out.println("The minimum element in an array is : " + min);
         System.out.println("The maximum element in an array is : " + max);
+        sc.close();
     }
 }

@@ -43,5 +43,6 @@ public class chocolate_distribution {
         for( int i = 0 ; i < new_arr.length ; i++ ) System.out.print(new_arr[i] + "\t");
 
         System.out.println("\nThe Minimum differnce will be : " + (int)(new_arr[new_arr.length-1] - new_arr[0]));
+        sc.close();
     }
 }
