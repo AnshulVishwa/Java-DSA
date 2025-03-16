@@ -49,6 +49,5 @@ public class insertLast {
         LinkedList list = new LinkedList();
         list.insert(10);
         list.insert(20);
-        list.display();
     }
 }

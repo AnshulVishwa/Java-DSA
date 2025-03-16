@@ -19,9 +19,9 @@ public class display {
         // The List created is head(10) -> 20 -> 30 -> null
         
         // Method to display Each node of List
-        display(head);
+        DisplayLinkedList(head);
     }
-    public static void display( Node temp ){
+    public static void DisplayLinkedList( Node temp ){
         // Loop will run until we get null 
         while( temp != null ){
             System.out.print(temp.data + " -> ");
