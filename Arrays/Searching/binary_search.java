@@ -20,5 +20,6 @@ public class binary_search{
         int num = sc.nextInt();
         int index = Search_Number( 0 , arr.length - 1 , num , arr );
         System.out.println(index);
+        sc.close();
     }
 }

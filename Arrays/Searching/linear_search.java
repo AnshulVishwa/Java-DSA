@@ -18,5 +18,6 @@ public class linear_search{
                 break;
             }
         }
+        sc.close();
     }
 }
