@@ -13,5 +13,6 @@ public class Kth_Smallest_element {
             arr[i] = sc.nextInt();
             if( i == length - 1 ) System.out.println("Array is Formed"); 
         }
+        sc.close();
     }
 }

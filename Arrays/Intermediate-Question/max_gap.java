@@ -12,6 +12,6 @@ public class max_gap {
     }
     public static void main(String[] args) {
         int arr[] = { 5 , 8 , 1 , 2 };
-        System.out.println(maximumGap(nums));
+        System.out.println(maximumGap(arr));
     }
 }

@@ -43,5 +43,6 @@ public class non_best_time_buy_sell {
         if( outcome == -1 ) System.out.println( "There is no Best time to sell and buy cuz the lowest is at last." );
         else if( outcome == -3 ) System.out.println( "There is no maximum than minimum" );
         else System.out.println( "Outcome is : " + outcome );
+        sc.close();
     }
 }

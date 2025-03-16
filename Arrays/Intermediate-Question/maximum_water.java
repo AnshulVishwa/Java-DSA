@@ -27,5 +27,6 @@ public class maximum_water {
         int base = max - second_max;
         if( base < 0 ) base = second_max - max;
         System.out.println("Total Area is : " + base*arr[second_max] );
+        sc.close();
     }
 }

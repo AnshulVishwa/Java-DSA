@@ -43,5 +43,6 @@ public class kth_largest_smallest {
         arr = find_kth_largest_smallest( arr , k , arr[0] , arr[0] );
         System.out.println("Kth largest element is " + arr[0]);
         System.out.println("Kth Smallest element is " + arr[1]);
+        sc.close();
     }
 }

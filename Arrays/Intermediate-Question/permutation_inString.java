@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class permutation_inString {
@@ -14,7 +13,6 @@ public class permutation_inString {
     }
     public static void main(String[] args) {
         String s1 = "abcd";
-        String p = s1;
         String s2 = "eidboadbacoo";
         char arr[] = s1.toCharArray();
         List<List<Character>> AllPermutations = new ArrayList<>();
@@ -44,6 +42,5 @@ public class permutation_inString {
             swap++;
         }
         System.out.println(ans);
-        // System.out.println(ans);
     }
 }

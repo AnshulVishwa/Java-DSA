@@ -44,5 +44,6 @@ public class missing_repeating {
 
         int missing = check_missing( arr , 0 , 0 );
         System.out.println("missing : " + missing);
+        sc.close();
     }
 }

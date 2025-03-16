@@ -48,6 +48,7 @@ class next_permutation{
             System.out.print(" ]");
             System.out.println();
         }
+        sc.close();
     }
 
 }

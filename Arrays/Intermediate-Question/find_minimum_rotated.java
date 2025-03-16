@@ -8,7 +8,7 @@ public class find_minimum_rotated{
         return min;
     }
     public static void main(String[] args) {
-        int arr[] = { 1 , 4  , 7 , 5 ,, 9 , 0 };
+        int arr[] = { 1 , 4  , 7 , 5 , 9 , 0 };
         int min = findMin(arr);
         System.out.println(min);
     }

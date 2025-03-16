@@ -29,5 +29,6 @@ public class sum_3 {
         int sum = sc.nextInt();
         boolean say = find_sum( arr , sum );
         System.out.println(say);
+        sc.close();
     }
 }

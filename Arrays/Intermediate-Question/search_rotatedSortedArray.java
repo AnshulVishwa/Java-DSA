@@ -8,10 +8,7 @@ public class search_rotatedSortedArray {
         return 0;
     }
     public static boolean search( int nums[] , int target ) {
-        int pivot = findPivot(nums);
-        int left = 0;
-        int right = nums.length-1;
-        if(  )
+        return false;
     }
     public static void main(String[] args) {
         int arr[] = { 2,5,6,0,0,1,2 };
