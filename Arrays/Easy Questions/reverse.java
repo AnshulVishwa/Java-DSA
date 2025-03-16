@@ -23,5 +23,6 @@ public class reverse {
             arr[x] = a;
         }
         for( int i = 0; i < arr.length ; i++ ) System.out.print(arr[i] + "\t");
+        sc.close();
     }
 }
